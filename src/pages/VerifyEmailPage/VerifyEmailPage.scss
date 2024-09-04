@@ -1,0 +1,14 @@
+@use "../../styles/mixins";
+
+.box {
+  background-color: var(--primary-green);
+  color: white;
+  height: 70vh;
+  max-height: 600px;
+  min-height: 300px;
+  border-radius: var(--box-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}

@@ -1,0 +1,5 @@
+*.scss
+/src/api-types.ts
+/src/graphql/mutations.ts
+/src/graphql/queries.ts
+/src/graphql/subscriptions.ts

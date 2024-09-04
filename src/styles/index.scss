@@ -1,0 +1,50 @@
+@use "variables";
+@use "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sm: #{map-get(variables.$bp, sm)};
+  --md: #{map-get(variables.$bp, md)};
+  --lg: #{map-get(variables.$bp, lg)};
+  --xl: #{map-get(variables.$bp, xl)};
+
+  --box-radius: 40px;
+
+  --primary-green: #BDD12D;
+  --primary-orange: #FF8200;
+  --dark-green: #394237;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-container {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  max-width: 540px;
+
+  @include mixins.mediaScreen(sm) {
+    max-width: 720px;
+  }
+  @include mixins.mediaScreen(md) {
+    max-width: 960px;
+  }
+  @include mixins.mediaScreen(lg) {
+    max-width: 1140px;
+  }
+}

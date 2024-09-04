@@ -1,0 +1,28 @@
+@use "../styles/mixins";
+
+.header {
+  height: 54px;
+  background-color: var(--dark-green);
+
+  @include mixins.mediaScreen(md) {
+    height: 60px;
+  }
+  @include mixins.mediaScreen(xl) {
+    border-radius: 0 0 var(--box-radius) var(--box-radius);
+  }
+}
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  &-brand {}
+}
+
+.spaced {
+  > * + * {
+    margin-top: 1rem;
+    @include mixins.mediaScreen(md) {
+      margin-top: 2rem;
+    }
+  }
+}

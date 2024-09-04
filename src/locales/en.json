@@ -1,0 +1,8 @@
+{
+  "verifyEmailPage": {
+    "missingEmail": "Email not found",
+    "missingToken": "Token not found",
+    "successMessage": "The operation was completed successfully!",
+    "errorMessage": "An error occurred. Please try again later or contact support."
+  }
+}
