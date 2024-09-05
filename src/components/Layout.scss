@@ -18,11 +18,11 @@
   &-brand {}
 }
 
-.spaced {
-  > * + * {
-    margin-top: 1rem;
-    @include mixins.mediaScreen(md) {
-      margin-top: 2rem;
+.layout {
+  @include mixins.mediaScreen(xl) {
+    > * + * {
+      margin-top: 6px;
     }
   }
+
 }

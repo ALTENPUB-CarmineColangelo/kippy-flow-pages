@@ -5,7 +5,7 @@ import { PropsWithChildren } from 'react';
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
-    <div className="App spaced">
+    <div className="layout">
       <header className="header page-container">
         <nav className="navbar container">
           <a className="navbar-brand" href="/it">
