@@ -2,8 +2,10 @@
 
 import './Layout.scss';
 import { PropsWithChildren } from 'react';
+import {useTranslation} from 'react-i18next';
 
 const Layout = ({ children }: PropsWithChildren) => {
+  const { t } = useTranslation();
   return (
     <div className="layout">
       <header className="header page-container">
@@ -17,6 +19,14 @@ const Layout = ({ children }: PropsWithChildren) => {
         </nav>
       </header>
       {children}
+      <footer className="footer page-container">
+        <div className="container">
+          <div className="row" >
+            <p className="disclaimer text-white">
+              {t('footer.disclaimer')}
+            </p></div>
+        </div>
+      </footer>
     </div>
   );
 };

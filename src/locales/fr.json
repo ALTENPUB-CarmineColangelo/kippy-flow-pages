@@ -4,5 +4,8 @@
     "missingToken": "Jeton non trouvé",
     "successMessage": "L'opération a été réalisée avec succès !",
     "errorMessage": "Une erreur s'est produite. Veuillez réessayer plus tard ou contacter le support."
+  },
+  "footer": {
+    "disclaimer": "2024 © KIPPY - une société du groupe Datamars, Via Industria 16, 6814 Lamone, Suisse - TVA : IT08263160965"
   }
 }
