@@ -11,7 +11,6 @@ const LanguageProvider = () => {
   const { i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
-
   const redirectToDefaultLanguage = () => {
     const path = [location.pathname, location.search].join('').split('/');
     path[1] = 'en';

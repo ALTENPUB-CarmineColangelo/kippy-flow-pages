@@ -1,5 +1,6 @@
 /** @format */
-import { createBrowserRouter, Navigate, Outlet } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
+import Layout from '../components/Layout';
 import VerifyEmailPage from '../pages/VerifyEmailPage/VerifyEmailPage';
 import LanguageProvider from '../i18n/LanguageProvider';
 import { getMockSelectedUserSearchParams } from '../mocks/users';
@@ -7,7 +8,7 @@ import { getMockSelectedUserSearchParams } from '../mocks/users';
 export const appRouter = createBrowserRouter([
   {
     path: '',
-    element: <Outlet />,
+    element: <Layout />,
     children: [
       {
         index: true,

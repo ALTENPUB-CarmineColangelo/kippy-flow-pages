@@ -1,24 +1,27 @@
 /** @format */
 
 import './Layout.scss';
-import { PropsWithChildren } from 'react';
+import { Outlet } from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
+// @ts-ignore
+import logo from '../assets/logo_kippy.webp';
 
-const Layout = ({ children }: PropsWithChildren) => {
-  const { t } = useTranslation();
+const Layout = () => {
+  const { i18n, t } = useTranslation();
+  const path = 'https://kippy.eu/' + i18n.language;
+
   return (
     <div className="layout">
       <header className="header page-container">
         <nav className="navbar container">
-          <a className="navbar-brand" href="/it">
+          <a className="navbar-brand" href={path}>
             <picture>
-              <source type="image/webp" srcSet="https://d33ko0jf8f2gvx.cloudfront.net/images/common/logo_kippy.webp" />
-              <img src="https://d33ko0jf8f2gvx.cloudfront.net/images/common/logo_kippy.png" width="88" height="34" alt="Kippy" />
+              <img src={logo} width="88" height="34" alt="Kippy" />
             </picture>
           </a>
         </nav>
       </header>
-      {children}
+      <Outlet />
       <footer className="footer page-container">
         <div className="container">
           <div className="row" >
