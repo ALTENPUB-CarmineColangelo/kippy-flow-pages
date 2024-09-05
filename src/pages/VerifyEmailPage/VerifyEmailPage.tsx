@@ -7,6 +7,8 @@ import { useApiVerifyEmailMutation } from '../../hooks/useApiVerifyEmailMutation
 import { BeatLoader } from 'react-spinners';
 import { useOnInit } from '../../hooks/useOnInit';
 import { useSearchParams } from 'react-router-dom';
+// @ts-ignore
+import defaultDog from '../../assets/ultimate-pack-dog.webp';
 
 const VerifyEmailPage = () => {
   const { t } = useTranslation();
@@ -14,6 +16,8 @@ const VerifyEmailPage = () => {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState<string>();
   const verifyEmailApi = useApiVerifyEmailMutation();
+  const [dog, setDog] = useState<string>();
+
   const fetchData = async () => {
     const email = urlParams.get('email');
     const token = urlParams.get('token');
@@ -40,10 +44,25 @@ const VerifyEmailPage = () => {
     if (email && token) {
     }
   };
+  const getRandomDog = (): string => {
+    const dogs = ['basic', 'premium', 'supreme', 'ultimate'];
+    const randomIndex = Math.floor(Math.random() * dogs.length);
+    return dogs[randomIndex];
+  };
+  const createDog = async () => {
+    try {
+      // @ts-ignore
+      const dog = await import(`../../assets/${getRandomDog()}-pack-dog.webp`);
+      setDog(dog.default);
+    } catch (err) {
+      setDog(defaultDog);
+    }
+  };
 
   useOnInit(() => {
     if (urlParams) {
       fetchData();
+      createDog();
     }
   }, [urlParams]);
 
@@ -51,6 +70,7 @@ const VerifyEmailPage = () => {
     <section className="page-container">
       <div className="container">
         <div className="box">
+          <figure className="preview">{!loading && <img src={dog} alt="Kippy" />}</figure>
           {loading && <BeatLoader color="#fff" />}
           {message && <h3>{message}</h3>}
         </div>
