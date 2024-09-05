@@ -1,13 +1,13 @@
 /** @format */
 
 import './Layout.scss';
-import { useTranslation } from 'react-i18next';
 import { Outlet } from 'react-router-dom';
+import {useTranslation} from 'react-i18next';
 // @ts-ignore
 import logo from '../assets/logo_kippy.webp';
 
 const Layout = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const path = 'https://kippy.eu/' + i18n.language;
 
   return (
@@ -22,6 +22,14 @@ const Layout = () => {
         </nav>
       </header>
       <Outlet />
+      <footer className="footer page-container">
+        <div className="container">
+          <div className="row" >
+            <p className="disclaimer text-white">
+              {t('footer.disclaimer')}
+            </p></div>
+        </div>
+      </footer>
     </div>
   );
 };

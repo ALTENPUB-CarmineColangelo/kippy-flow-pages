@@ -18,6 +18,25 @@
   &-brand {}
 }
 
+.footer {
+
+  background-color: var(--dark-green);
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .disclaimer {
+    text-align: center;
+  }
+
+  @include mixins.mediaScreen(xl) {
+    border-radius: var(--box-radius) var(--box-radius) 0 0;
+  }
+}
+
 .layout {
   @include mixins.mediaScreen(xl) {
     > * + * {
