@@ -4,5 +4,8 @@
     "missingToken": "Token not found",
     "successMessage": "The operation was completed successfully!",
     "errorMessage": "An error occurred. Please try again later or contact support."
+  },
+  "footer": {
+    "disclaimer": "2024 © KIPPY - a Datamars Group Company, Via Industria 16, 6814 Lamone, Switzerland – VAT: IT08263160965"
   }
 }
