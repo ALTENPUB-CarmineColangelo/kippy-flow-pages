@@ -8,11 +8,12 @@
 }
 $primary-green: #BDD12D;
 $primary-orange: #FF8200;
+$primary-yellow: #F0D44D;
 $dark-green: #394237;
 $black: #000;
 $white: #fff;
 
-$colors: (primary-green, primary-orange ,dark-green,'black', 'white');
+$colors: (primary-green, primary-orange , primary-yellow, dark-green,'black', 'white');
 
 :root {
   --sm: #{map-get(variables.$bp, sm)};
@@ -25,6 +26,7 @@ $colors: (primary-green, primary-orange ,dark-green,'black', 'white');
 
   --primary-green: #{$primary-green};
   --primary-orange: #{$primary-orange};
+  --primary-yellow: #{$primary-yellow};
   --dark-green: #{$dark-green};
   --black: #{$black};
   --white: #{$white};

@@ -1,0 +1,19 @@
+@use "../../../styles/mixins";
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12rem;
+  filter: drop-shadow(0 4px 16px rgba(black, 0.16));
+
+  &.info {
+    color: var(--primary-yellow);
+  }
+  &.success {
+    color: var(--white)
+  }
+  &.error {
+    color: var(--dark-green);
+  }
+}

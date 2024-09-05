@@ -7,9 +7,7 @@ import { useApiVerifyEmailMutation } from '../../hooks/useApiVerifyEmailMutation
 import { BeatLoader } from 'react-spinners';
 import { useOnInit } from '../../hooks/useOnInit';
 import { useSearchParams } from 'react-router-dom';
-import MessageBox, { MessageType } from './partials/MessageBox';
-// @ts-ignore
-import resultPic from '../../assets/back-device-v2.png';
+import IconBox, { MessageType } from './partials/IconBox';
 
 const VerifyEmailPage = () => {
   const { t } = useTranslation();
@@ -60,13 +58,13 @@ const VerifyEmailPage = () => {
         <div className="box">
           <div className="box__col">
             <figure className="preview">
-              <img src={resultPic} alt="Kippy" />
+              <div className="preview__icon">
+                {loading && <BeatLoader size={'2rem'} color="#fff" />}
+                {status && <IconBox type={status} />}
+              </div>
             </figure>
           </div>
-          <div className="box__col">
-            {loading && <BeatLoader color="#fff" />}
-            {message && <MessageBox type={status} message={message} />}
-          </div>
+          <div className="box__col">{message && <h2 className="message">{message}</h2>}</div>
         </div>
       </div>
     </section>
