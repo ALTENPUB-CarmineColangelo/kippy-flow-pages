@@ -6,7 +6,7 @@ import {MdErrorOutline, MdInfoOutline} from 'react-icons/md';
 export type MessageType = 'info' | 'success' | 'error';
 
 type MessageBoxProps = {
-  type: MessageType;
+  type?: MessageType;
   message: string;
 }
 const MessageBox = ({ type, message }: MessageBoxProps) => {
