@@ -2,7 +2,7 @@
 
 import './Layout.scss';
 import { Outlet } from 'react-router-dom';
-import {useTranslation} from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 // @ts-ignore
 import logo from '../assets/logo_kippy.webp';
 
@@ -21,13 +21,14 @@ const Layout = () => {
           </a>
         </nav>
       </header>
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <footer className="footer page-container">
         <div className="container">
-          <div className="row" >
-            <p className="disclaimer text-white">
-              {t('footer.disclaimer')}
-            </p></div>
+          <div className="row">
+            <p className="disclaimer text-white">{t('footer.disclaimer')}</p>
+          </div>
         </div>
       </footer>
     </div>

@@ -1,6 +1,22 @@
 @use "../styles/mixins";
 
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100vh;
+
+  @include mixins.mediaScreen(xl) {
+    gap: 6px;
+    > main {
+      margin: auto;
+      width: 100%;
+    }
+  }
+}
+
 .header {
+  width: 100%;
   height: 54px;
   background-color: var(--dark-green);
 
@@ -11,6 +27,7 @@
     border-radius: 0 0 var(--box-radius) var(--box-radius);
   }
 }
+
 .navbar {
   height: 100%;
   display: flex;
@@ -19,7 +36,6 @@
 }
 
 .footer {
-
   background-color: var(--dark-green);
   .row {
     display: flex;
@@ -37,11 +53,3 @@
   }
 }
 
-.layout {
-  @include mixins.mediaScreen(xl) {
-    > * + * {
-      margin-top: 6px;
-    }
-  }
-
-}
