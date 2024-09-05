@@ -3,6 +3,7 @@
 import './Layout.scss';
 import { useTranslation } from 'react-i18next';
 import { Outlet } from 'react-router-dom';
+// @ts-ignore
 import logo from '../assets/logo_kippy.webp';
 
 const Layout = () => {
