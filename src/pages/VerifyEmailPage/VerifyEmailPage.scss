@@ -1,26 +1,29 @@
 @use "../../styles/mixins";
 
 .box {
-  background-color: var(--primary-green);
-  color: white;
-  border-radius: var(--box-radius);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
   gap: 2rem;
   padding: 2rem;
 
   @include mixins.mediaScreen(md) {
-    height: 30vh;
-    max-height: 300px;
-    min-height: 200px;
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .preview {
     width: 100%;
+    max-width: 200px;
     aspect-ratio: 1;
     order: 1;
+    margin: auto;
 
     @include mixins.mediaScreen(md) {
       height: 100%;

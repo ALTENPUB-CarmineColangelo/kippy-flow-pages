@@ -6,6 +6,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+$primary-green: #BDD12D;
+$primary-orange: #FF8200;
+$dark-green: #394237;
+$black: #000;
+$white: #fff;
+
+$colors: (primary-green, primary-orange ,dark-green,'black', 'white');
 
 :root {
   --sm: #{map-get(variables.$bp, sm)};
@@ -16,10 +23,22 @@
   --box-radius: 40px;
   --pic-radius: 34px;
 
-  --primary-green: #BDD12D;
-  --primary-orange: #FF8200;
-  --dark-green: #394237;
+  --primary-green: #{$primary-green};
+  --primary-orange: #{$primary-orange};
+  --dark-green: #{$dark-green};
+  --black: #{$black};
+  --white: #{$white};
 }
+
+@each $colorName in $colors {
+  .bg-#{$colorName} {
+    background-color: #{'var(--'+$colorName+')'};
+  }
+  .text-#{$colorName} {
+    color: #{'var(--'+$colorName+')'};
+  }
+}
+
 
 body {
   margin: 0;
@@ -31,6 +50,12 @@ body {
 .page-container {
   margin: 0 auto;
   max-width: 1600px;
+
+  &--box {
+    @include mixins.mediaScreen(xl) {
+      border-radius: var(--box-radius);
+    }
+  }
 }
 
 .container {

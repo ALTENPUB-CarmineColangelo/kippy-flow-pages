@@ -1,0 +1,20 @@
+@use "../../../styles/mixins";
+
+.messageBox {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
