@@ -3,7 +3,8 @@
     "missingEmail": "Email non trovata",
     "missingToken": "Token non trovato",
     "successMessage": "L'operazione è stata completata con successo!",
-    "errorMessage": "Si è verificato un errore. Per favore riprova più tardi o contatta il supporto."
+    "errorMessage": "Si è verificato un errore. Per favore riprova più tardi o contatta il supporto.",
+    "genericErrorMessage": "Errore generico"
   },
   "footer": {
     "disclaimer": "2024 © KIPPY - parte del Gruppo Datamars, Via Cosimo del Fante 10, 20122 Milano – P.IVA: IT08263160965"

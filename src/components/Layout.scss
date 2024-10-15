@@ -8,11 +8,13 @@
 
   @include mixins.mediaScreen(xl) {
     gap: 6px;
-    > main {
-      margin: auto;
-      width: 100%;
-    }
   }
+}
+
+main {
+  margin: auto;
+  width: 100%;
+  padding: 1rem 2rem;
 }
 
 .header {

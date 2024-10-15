@@ -9,11 +9,12 @@
 $primary-green: #BDD12D;
 $primary-orange: #FF8200;
 $primary-yellow: #F0D44D;
+$light-gray: #F2F0ED;
 $dark-green: #394237;
 $black: #000;
 $white: #fff;
 
-$colors: (primary-green, primary-orange , primary-yellow, dark-green,'black', 'white');
+$colors: (primary-green, primary-orange , primary-yellow, light-gray, dark-green, 'black', 'white');
 
 :root {
   --sm: #{map-get(variables.$bp, sm)};
@@ -27,6 +28,7 @@ $colors: (primary-green, primary-orange , primary-yellow, dark-green,'black', 'w
   --primary-green: #{$primary-green};
   --primary-orange: #{$primary-orange};
   --primary-yellow: #{$primary-yellow};
+  --light-gray: #{$light-gray};
   --dark-green: #{$dark-green};
   --black: #{$black};
   --white: #{$white};
@@ -55,9 +57,7 @@ body {
   max-width: 1600px;
 
   &--box {
-    @include mixins.mediaScreen(xl) {
-      border-radius: var(--box-radius);
-    }
+    border-radius: var(--box-radius);
   }
 }
 

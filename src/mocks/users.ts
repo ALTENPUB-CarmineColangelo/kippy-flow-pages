@@ -10,6 +10,6 @@ export const gianniv = {
   token: '26dbf390-396d-4084-ad9d-37de6baec0bc',
 };
 
-const SELECTED_USER = ambram;
+const SELECTED_USER = gianniv;
 
 export const getMockSelectedUserSearchParams = () => new URLSearchParams(SELECTED_USER).toString();

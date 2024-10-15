@@ -53,7 +53,9 @@ const VerifyEmailPage = () => {
   }, [urlParams]);
 
   return (
-    <section className="page-container page-container--box bg-primary-green text-white">
+    <section
+      className={`page-container page-container--box text-white ${status === 'error' ? 'bg-primary-orange' : status === 'info' ? 'bg-light-gray' : 'bg-primary-green'}`}
+    >
       <div className="container">
         <div className="box">
           <div className="box__col">
@@ -64,7 +66,9 @@ const VerifyEmailPage = () => {
               </div>
             </figure>
           </div>
-          <div className="box__col">{message && <h2 className="message">{message}</h2>}</div>
+          <div className="box__col">
+            <section>{message && <h2 className="message">{message}</h2>}</section>
+          </div>
         </div>
       </div>
     </section>
